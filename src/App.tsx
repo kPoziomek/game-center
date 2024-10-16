@@ -1,6 +1,7 @@
 import {Col, Grid, Row} from 'rsuite';
 
 import {NavBar} from "./components/NavBar.tsx";
+import {GameGrid} from "./components/GameGrid.tsx";
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
           Aside
         </Col>
         <Col className="" xs={24} md={12}>xs={12}
-        Main
+        <GameGrid/>
         </Col>
       </Row>
 
