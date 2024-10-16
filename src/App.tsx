@@ -1,14 +1,26 @@
-import { Button } from 'rsuite';
+import {Col, Grid, Row} from 'rsuite';
 
-import './App.css'
+import {NavBar} from "./components/NavBar.tsx";
 
 function App() {
 
   return (
-    <>
-      <Button appearance="primary">Primary</Button>
+    <Grid>
+    <Row>
+      <Col className="dodgerblue" xs={24}>
+      <NavBar />
+      </Col>
+    </Row>
+      <Row >
+        <Col xsHidden smHidden xs={12}>xs={12}
+          Aside
+        </Col>
+        <Col className="" xs={24} md={12}>xs={12}
+        Main
+        </Col>
+      </Row>
 
-    </>
+    </Grid>
   )
 }
 

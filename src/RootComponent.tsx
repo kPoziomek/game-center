@@ -6,7 +6,7 @@ type RootComponentProps = {
 }
 
 export const RootComponent = ({children}:RootComponentProps) => {
-  const [theme,] = useState<"dark" | "light" | "high-contrast" | undefined>('dark');
+  const [theme,] = useState<"dark" | "light" | "high-contrast" | undefined>('light');
 
   return( <CustomProvider theme={theme}>
       {children}
