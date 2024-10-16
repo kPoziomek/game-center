@@ -1,28 +1,26 @@
-import {Col, Grid, Row} from 'rsuite';
-
-import {NavBar} from "./components/NavBar.tsx";
-import {GameGrid} from "./components/GameGrid.tsx";
+import { Col, Container, Grid } from "rsuite";
+import { GameGrid } from "./components/GameGrid.tsx";
+import { NavBar } from "./components/NavBar.tsx";
 
 function App() {
-
-  return (
-    <Grid fluid>
-    <Row>
-      <Col className="dodgerblue" xs={24}>
-      <NavBar />
-      </Col>
-    </Row>
-      <Row >
-        <Col xsHidden smHidden xs={12}>xs={12}
-          Aside
-        </Col>
-        <Col className="" xs={24} md={12}>xs={12}
-        <GameGrid/>
-        </Col>
-      </Row>
-
-    </Grid>
-  )
+	return (
+		<Container className="p-2">
+			<NavBar />
+			<Container>
+				<Grid fluid={true}>
+					<Col xsHidden={true} smHidden={true} md={4}>
+						<ul>
+							<li>xsHidden</li>
+							<li>smHidden</li>
+						</ul>
+					</Col>
+					<Col xs={24} md={20}>
+						<GameGrid />
+					</Col>
+				</Grid>
+			</Container>
+		</Container>
+	);
 }
 
-export default App
+export default App;
