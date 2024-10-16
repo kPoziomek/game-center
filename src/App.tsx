@@ -5,7 +5,7 @@ import {NavBar} from "./components/NavBar.tsx";
 function App() {
 
   return (
-    <Grid>
+    <Grid fluid>
     <Row>
       <Col className="dodgerblue" xs={24}>
       <NavBar />
