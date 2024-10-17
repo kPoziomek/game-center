@@ -3,7 +3,7 @@ import { useFetchGames } from "../hooks/useFetchGames.ts";
 import { Card } from "./Card.tsx";
 
 export const GameGrid = () => {
-	const { isLoading, games } = useFetchGames();
+	const { isLoading, data } = useFetchGames();
 	return (
 		<>
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
@@ -20,7 +20,7 @@ export const GameGrid = () => {
 						</Panel>
 					))}
 
-				{games.map((game) => (
+				{data.map((game) => (
 					<Card key={game.id} game={game} />
 				))}
 			</div>
