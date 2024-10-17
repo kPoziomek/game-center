@@ -4,7 +4,7 @@ import { ThemeSwitch } from "./ThemeSwitch.tsx";
 
 export const NavBar = () => {
 	return (
-		<Header className="flex w-full justify-between">
+		<Header className="flex w-full justify-between mb-2">
 			<Avatar src={logo} size="lg" />
 			<ThemeSwitch />
 		</Header>
