@@ -21,7 +21,6 @@ type Props = {
 };
 
 export const PlatformIconList = ({ platform }: Props) => {
-	console.log(platform);
 	const IconMap: { [key: string]: IconType } = {
 		playstation: FaPlaystation,
 		xbox: FaXbox,
@@ -40,8 +39,9 @@ export const PlatformIconList = ({ platform }: Props) => {
 				<Icon
 					key={platform.id}
 					as={IconMap[platform.slug]}
+					// @ts-ignore
 					size="1.5em"
-					class="text-neutral-300"
+					className="text-neutral-300"
 				/>
 			))}
 		</div>
