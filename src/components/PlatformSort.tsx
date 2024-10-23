@@ -13,7 +13,6 @@ export const PlatformSort = () => {
 		{ value: "-metacritic", label: "metacritic" },
 	];
 
-	console.log(gameQuery.sortOrder);
 	return (
 		<Dropdown
 			title={`sort by ${sortOrders.find((platform) => platform.label === gameQuery.sortOrder)?.label || ""}`}
