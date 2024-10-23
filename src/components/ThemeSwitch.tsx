@@ -5,7 +5,9 @@ export const ThemeSwitch = () => {
 	const { toggleTheme } = useTheme();
 	return (
 		<HStack>
-			<Toggle onChange={toggleTheme}>DarkMode</Toggle>
+			<Toggle className="whitespace-nowrap" onChange={toggleTheme}>
+				DarkMode
+			</Toggle>
 		</HStack>
 	);
 };
