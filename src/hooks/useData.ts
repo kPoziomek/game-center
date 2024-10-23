@@ -10,7 +10,7 @@ type FetchResponse<T> = {
 export const useData = <T>(
 	endpoint: string,
 	requestConfig?: AxiosRequestConfig,
-	deps?: number[],
+	deps?: any[],
 ) => {
 	const [data, setData] = useState<T[]>([]);
 	const [error, setError] = useState(null);

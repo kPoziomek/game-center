@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Dropdown } from "rsuite";
 import { useGameQuery } from "../hooks/useGameQuery.ts";
 import { usePlatforms } from "../hooks/usePlatforms.ts";

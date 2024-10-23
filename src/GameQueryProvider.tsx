@@ -35,7 +35,15 @@ export const GameQueryProvider = ({ children }: RootComponentProps) => {
 	const [gameQuery, setGameQuery] = useState<GameQuery>({
 		genre: null,
 		platform: null,
-		sortOrder: { value: "-name", label: "name" },
+		sortOrder: [
+			{ value: "-name", label: "name" },
+			{ value: "-released", label: "released" },
+			{ value: "-added", label: "added" },
+			{ value: "-created", label: "created" },
+			{ value: "-updated", label: "updated" },
+			{ value: "-rating", label: "rating" },
+			{ value: "-metacritic", label: "metacritic" },
+		],
 		searchText: "",
 	});
 

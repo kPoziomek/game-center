@@ -15,11 +15,13 @@ export const PlatformSort = () => {
 
 	return (
 		<Dropdown
+			// @ts-ignore
 			title={`sort by ${sortOrders.find((platform) => platform.label === gameQuery.sortOrder)?.label || ""}`}
 		>
 			{sortOrders.map((platform) => (
 				<Dropdown.Item
-					active={gameQuery.sortOrder === platform.label}
+					// @ts-ignore
+					active={platform.label === gameQuery.sortOrder}
 					key={platform.label}
 					eventKey={platform.label}
 					onSelect={() => {
