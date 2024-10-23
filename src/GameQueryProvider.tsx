@@ -1,9 +1,18 @@
 import { type ReactNode, createContext, useState } from "react";
-
+export type TsortOrder = [
+	{ value: "-name"; label: "name" },
+	{ value: "-released"; label: "released" },
+	{ value: "-added"; label: "added" },
+	{ value: "-created"; label: "created" },
+	{ value: "-updated"; label: "updated" },
+	{ value: "-rating"; label: "rating" },
+	{ value: "-metacritic"; label: "metacritic" },
+];
 interface GameQuery {
 	genre: number | null;
-	platform: string | null;
-	sortOrder: "asc" | "desc";
+	platform: number | null;
+
+	sortOrder: TsortOrder;
 	searchText: string;
 }
 
@@ -26,7 +35,7 @@ export const GameQueryProvider = ({ children }: RootComponentProps) => {
 	const [gameQuery, setGameQuery] = useState<GameQuery>({
 		genre: null,
 		platform: null,
-		sortOrder: "asc",
+		sortOrder: { value: "-name", label: "name" },
 		searchText: "",
 	});
 
